@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show/Hide Paragraph</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Include jQuery library -->
+    <style>
+        #paragraph{
+            display: block;
+        }
+        
+        body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+        }
+        
+        
+        #hideButton{
+          background-color: #a067cc; 
+          border: none;
+          color: white; 
+          padding: 15px 32px; 
+          text-align: center; 
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+          border-radius: 8px; 
+          font-weight: bold;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+           transition: background-color 0.3s, box-shadow 0.3s; 
+        }
+        #hideButton:hover{
+          background-color: #93e7acd8; 
+          box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); 
+        }
+        #showButton{
+          background-color: #a067cc; 
+          border: none;
+          color: white; 
+          padding: 15px 32px; 
+          text-align: center; 
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+          border-radius: 8px; 
+          font-weight: bold;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+           transition: background-color 0.3s, box-shadow 0.3s; 
+        }
+        #showButton:hover{
+          background-color: #93e7acd8; 
+          box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); 
+        }
+      
+    </style>
+</head>
+<body>
+    <p id="paragraph">This is a paragraph line.</p>
+    <button id="hideButton">Hide</button> 
+    <button id="showButton">Show</button>  
+
+    <script>
+        $(document).ready(function() {
+            $("#hideButton").click(function() {
+                $("#paragraph").hide(); 
+            });
+
+            $("#showButton").click(function() {
+                $("#paragraph").show(); 
+            });
+        });
+    </script>
+</body>
+</html>

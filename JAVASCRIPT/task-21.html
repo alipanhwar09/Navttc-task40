@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Months of the Year</title>
+    <style>
+         #monthsDisplay{
+            font-family:monospace;
+            text-align: center;
+            font-size: xx-large;
+            background: rgb(240, 238, 100);
+            color: rgb(8, 49, 85);
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var months = [
+                "January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"
+            ];
+            var currentDate = new Date();
+            var currentMonthIndex = currentDate.getMonth();
+            var currentMonth = months[currentMonthIndex];
+            
+            var monthString = "Months of the Year: ";
+            for (var i = 0; i < months.length; i++) {
+                monthString += months[i];
+                if (i < months.length - 1) {
+                    monthString += ", "; 
+                }
+            }
+            monthString += "<br>Current Month: " + currentMonth;
+            document.getElementById("monthsDisplay").innerHTML = monthString;
+        });
+    </script>
+</head>
+<body>
+    <div id="monthsDisplay"></div>
+</body>
+</html>
+

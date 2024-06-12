@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <title>Form Table</title>
+        <style>
+            table{
+                border: 2px solid black;
+                margin-left: 500px;
+                
+            }
+            td{
+                border: 1px double black;
+                text-align: center;
+            }
+            #check{
+                /* text-align: right; */
+                padding-right: 100px;
+                
+                
+            }
+            #main{
+                text-align: right;
+            }
+            #count{
+               padding-right: 100px;
+            }
+            #gen1{
+                padding-right: 43px;
+            }
+          #btn1{
+            text-align: right;
+          }
+          #btn2{
+            text-align: left;
+          }
+          body {
+font-family: Arial, sans-serif;
+}
+
+
+        </style>
+    </head>
+    <body>
+        
+        <table>
+            <tr>
+                <td colspan="2">REPORT FORM</td>
+             
+            </tr>
+            <tr>
+                <td colspan="2" bgcolor="navyblue">INFORMATION TABLE</td>
+              
+            </tr>
+            <tr>
+                <td id="main">NAME</td>
+                <td><input type="text" name="" id="" placeholder="Enter Your Full Name"></td>
+            </tr>
+            <tr>
+                <td id="main">EMAIL</td>
+                <td><input type="email" name="" id="" placeholder="Enter Your Email"></td>
+            </tr>
+            <tr>
+                <td id="main">PASSWORD</td>
+                <td><input type="password" name="" id="" placeholder="Enter Your Password"></td>
+            </tr>
+            <tr>
+                <td id="main">ADDRESS</td>
+                <td><input type="address" name="" id=""placeholder="Compelete Address"></td>
+            </tr>
+            <tr>
+                <td id="main" >COUNTRY</td>
+                <td id="count"><select name="text" id="">
+                    <option value="text"></option>
+                    <option value="text" selected >Pakistan</option>
+                    <option value="text">China</option>
+                    <option value="text">Usa</option>
+                    <option value="text">Uae</option>
+                    <option value="text">Saudia</option>
+                    <option value="text">Turkey</option>
+            
+                   </select>
+                </td>
+                <tr>
+                    <td id="main">GENDER</td>
+                    <td id ="gen1">Male<input type="radio" name="" id="" value="male" >
+                        Female<input type="radio" name="" id="" value="female">
+                    </td>
+                
+            </tr>
+            <tr>
+                <td id="main">HOBBIES</td>
+                <td id="check"> Reading<input type="checkbox"><br>
+                    Music<input type="checkbox"><br>
+                    Cricket<input type="checkbox"><br>
+                    Movies<input type="checkbox"><br>
+                    Football<input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td id="main">YOUR WEBSITE</td>
+                <td><input type="url" placeholder="http://"></td>
+            </tr>
+            <tr>
+                <td id="main">OTHER INFORMATION ABOUT YOU</td>
+                <td><textarea name="" id="" cols="20" rows="10" placeholder="Wrtie other information here"></textarea></td>
+            </tr>
+            <tr>
+                <td id="btn1"><button type="submit">Send My Report</button></td>
+                <td id="btn2"><button type="reset" >Reset Form</button></td>
+            </tr>
+        </table>
+        
+    </body>
+</html>

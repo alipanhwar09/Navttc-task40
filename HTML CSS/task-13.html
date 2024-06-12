@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu Example</title>
+    <style>
+        /* Basic styling for the body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Styling the main navigation menu */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        /* Styling each navigation item */
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        /* Hover effect for navigation items */
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color: #575757;
+        }
+
+        /* The container for dropdowns */
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        /* The dropdown button */
+        .dropdown .dropbtn {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 20px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        /* Hover effect for dropdown links */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Styling nested dropdowns */
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        /* Nested dropdown content */
+        .dropdown-submenu .dropdown-content {
+            top: 0;
+            left: 100%;
+            margin-top: -1px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <div class="dropdown">
+        <button class="dropbtn">Services 
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="#webdesign">Web Design</a>
+            <a href="#seo">SEO</a>
+            <div class="dropdown-submenu">
+                <a href="#marketing" class="submenu">Marketing</a>
+                <div class="dropdown-content">
+                    <a href="#socialmedia">Social Media</a>
+                    <a href="#email">Email Marketing</a>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <a href="#contact">Contact</a>
+</div>
+
+</body>
+</html>

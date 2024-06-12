@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Using HTML CSS JAVASCRIPT</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg,#0a0a0a, #3a4452);
+        }
+        .calculator{
+            border: 2px solid #717377;
+            padding: 20px;
+            border-radius: 16px;
+            background: transparent;
+            box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
+        }
+        input{
+            width: 350px;
+            border: none;
+            padding: 24px;
+            margin: 10px;
+            background: transparent;
+            box-shadow: 0px 3px 15px rgba(84, 84, 84, 0.1);
+            font-size: 40px;
+            text-align: right;
+            cursor: pointer;
+            color: #ffff;
+
+        }
+        input::placeholder{
+            color: #ffff;
+
+        }
+        button{
+            border: none;
+            width: 60px;
+            height: 60px;
+            margin: 10px;
+            border-radius: 50%;
+            /* background: transparent; */
+            /* color: #ffff; */
+            font-size: 20px;
+            cursor: pointer;
+            
+        }
+        .opbtn{
+            background-color: #fb7c14;
+        }
+    </style>
+    <script>
+     var num1 = "";
+        var num2 = "";
+        var result = "";
+        var operation = "";
+        
+        function one1(){
+            num1 = num1+document.getElementById("one").value;
+            document.getElementById("result").value=num1;
+        }
+
+        function two2(){
+            num1 = num1+document.getElementById("two").value;
+            document.getElementById("result").value=num1;
+        }
+        function three3(){
+            num1 = num1+document.getElementById("three").value;
+            document.getElementById("result").value=num1;
+        }
+        function four4(){
+            num1 = num1+document.getElementById("four").value;
+            document.getElementById("result").value=num1;
+        }
+        function five5(){
+            num1 = num1+document.getElementById("five").value;
+            document.getElementById("result").value=num1;
+        }
+        function six6(){
+            num1 = num1+document.getElementById("six").value;
+            document.getElementById("result").value=num1;
+        }
+        function seven7(){
+            num1 = num1+document.getElementById("seven").value;
+            document.getElementById("result").value=num1;
+        }
+        function eight8(){
+            num1 = num1+document.getElementById("eight").value;
+            document.getElementById("result").value=num1;
+        }
+        function nine9(){
+            num1 = num1+document.getElementById("nine").value;
+            document.getElementById("result").value=num1;
+        }
+        function zero0(){
+            num1 = num1+document.getElementById("zero").value;
+            document.getElementById("result").value=num1;
+        }
+        function plus1(){
+            num2 = num1;
+            num1 = "";
+            operation = "+";
+            document.getElementById("result").value = "";
+            document.getElementById("result").value ="+";
+        }
+        function equal1(){
+            switch(operation){
+                case "+":
+            result= (parseInt(num1)) + (parseInt(num2));
+           document.getElementById("result").value=result;
+           break;
+           case "-":
+           result= (parseInt(num2)) - (parseInt(num1));
+           document.getElementById("result").value=result;
+           break;
+           case "*":
+           result= (parseInt(num2)) * (parseInt(num1));
+           document.getElementById("result").value=result;
+           break;
+           case "/":
+           result= (parseInt(num2)) / (parseInt(num1));
+           document.getElementById("result").value=result;
+           break;
+        //    case "C"
+        //    document.getElementById("result").value=result;
+
+
+        }
+    }
+    
+        function minus1(){
+            num2=num1;
+            num1="";
+            operation="-";
+            document.getElementById("result").value="";
+            document.getElementById("result").value="-";
+        }
+        function multiply1(){
+            num2=num1;
+            num1="";
+            operation="*";
+            document.getElementById("result").value="";
+            document.getElementById("result").value="*";
+        }
+        function division1(){
+            num2=num1;
+            num1="";
+            operation="/";
+            document.getElementById("result").value="";
+            document.getElementById("result").value="/";
+        }
+        function clear1(){
+            num2=num1;
+            num1="";
+            operation="0";
+            document.getElementById("result").value="";
+            document.getElementById("result").value="0";
+        }
+    </script>
+</head>
+<body>
+<div class="calculator">
+        <input type="text" name="" id="result" placeholder="0">
+    <div>    
+        <button type="button" value="7" id="seven" onclick="seven7()">7</button>
+        <button type="button" value="8" id="eight" onclick="eight8()">8</button>
+        <button type="button" value="9" id="nine" onclick="nine9()">9</button>
+        <button class="opbtn" type="button" value="/" id="multiply" onclick="division1()">/</button>
+    </div>
+    <div>    
+        <button type="button" value="4" id="four" onclick="four4()">4</button>
+        <button type="button" value="5" id="five" onclick="five5()">5</button>
+        <button type="button" value="6" id="six" onclick="six6()">6</button>
+        <button class="opbtn" type="button" value="*" id="multiply" onclick="multiply1()">x</button>
+    </div>
+    <div>
+        <button type="button"   value="1" id="one" onclick="one1()">1</button>
+        <button type="button" value="2" id="two" onclick="two2()">2</button>
+        <button type="button" value="3" id="three" onclick="three3()">3</button>
+        <button class="opbtn" type="button" value="-" id="minus" onclick="minus1()">-</button>
+    </div>
+    <div>
+        <button type="button" value="0" id="zero" onclick="zero0()">0</button>
+        <button class="opbtn" type="button" value="0" id="clear" onclick="clear1()">C</button>
+        <button class="opbtn" type="button" value="=" id="equal" onclick="equal1()">=</button>
+        <button class="opbtn" type="button" value="+" id="plus" onclick="plus1()">+</button>
+    </div>
+   
+    
+</div>
+
+</body>
+</html>

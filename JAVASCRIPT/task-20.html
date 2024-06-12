@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day of the Week</title>
+    <style>
+        #dayOfWeek{
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            font-size: xx-large;
+            background: #e70e0e;
+            color: aliceblue;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var today = new Date().getDay();
+            var dayOfWeek;
+            switch (today) {
+                case 0:
+                    dayOfWeek = "Sunday";
+                    break;
+                case 1:
+                    dayOfWeek = "Monday";
+                    break;
+                case 2:
+                    dayOfWeek = "Tuesday";
+                    break;
+                case 3:
+                    dayOfWeek = "Wednesday";
+                    break;
+                case 4:
+                    dayOfWeek = "Thursday";
+                    break;
+                case 5:
+                    dayOfWeek = "Friday";
+                    break;
+                case 6:
+                    dayOfWeek = "Saturday";
+                    break;
+                default:
+                    dayOfWeek = "Unknown";
+                    break;
+            }
+            document.getElementById("dayOfWeek").textContent = "Today is " + dayOfWeek;
+        });
+    </script>
+</head>
+<body>
+    <div id="dayOfWeek"></div>
+</body>
+</html>

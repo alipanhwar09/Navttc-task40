@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert Message</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+        }
+        
+        
+        #btn{
+          background-color: #a067cc; 
+          border: none;
+          color: white; 
+          padding: 15px 32px; 
+          text-align: center; 
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+          border-radius: 8px; 
+          font-weight: bold;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+           transition: background-color 0.3s, box-shadow 0.3s; 
+        }
+        #btn:hover{
+          background-color: #93e7acd8; 
+          box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); 
+        }
+      </style>
+    <script>
+        function showAlert() {
+            alert("Button clicked"); 
+        }
+    </script>
+</head>
+<body>
+    <button onclick="showAlert()" id="btn">Click Me</button> 
+</body>
+</html>

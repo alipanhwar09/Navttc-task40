@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting</title>
+    <style>
+        #greeting{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-align: center;
+            font-size: xx-large;
+            background: #000;
+            color: aliceblue;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var currentTime = new Date().getHours();
+            var greeting;
+            if (currentTime < 12) {
+                greeting = "Good Morning";
+            } else {
+                greeting = "Good Afternoon";
+            }
+            document.getElementById("greeting").textContent = greeting;
+        });
+    </script>
+</head>
+<body>
+    <div id="greeting"></div>
+</body>
+</html>
